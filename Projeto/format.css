@@ -1,0 +1,61 @@
+.fixFloat {
+	clear: both;
+}
+
+
+body {
+	background-color: #cdab78;/*Cor de fundo*/
+	background-image: url("imagens/background.jpg");
+	background-size: 100%;
+	margin: auto;
+	width: 100%;
+	padding: 0px;
+	overflow-y: scroll;
+}
+
+/*Cabeçalho*/
+header {
+	width: 960px;
+	margin-left: 10%;
+}
+
+
+
+/*Conteúdo primeira página*/
+
+.menu{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.armario{
+	color:#462715;
+	margin-left: 30px;
+	font-size: 80px;
+	
+	
+}
+.linha{
+	height: 2px;
+	width: 81%;
+	border:0;
+	background-color: black;
+	float:left;
+	
+}
+
+#escrita {
+	margin-top: 10%;
+	margin-left: 10%;
+	width: 960px;
+}
+
+.imagemlogo {
+	margin-top: 70px;
+	margin-left: 1460px;
+}
+
+.li.square{
+	list-style: square;
+}
+
+/*rodapé*/
