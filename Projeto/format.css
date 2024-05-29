@@ -1,0 +1,87 @@
+.fixFloat {
+	clear: both;
+}
+
+/*corpo do site*/
+body {
+	background-color: #cdab78;
+	/*Cor de fundo*/
+	background-image: url("imagens/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: auto;
+	width: 100%;
+	padding: 0px;
+	overflow-y: scroll;
+}
+
+/*Cabeçalho*/
+header {
+	width: 960px;
+	margin-left: 10%;
+}
+
+
+/*Conteúdo primeira página*/
+
+.menu {
+	list-style-type: none;
+}
+
+#menu ul {
+	list-style: none;
+	margin-top: -40px;
+	padding: 0;
+	padding-left: 25px;
+}
+
+#menu li {
+	margin-top: 60px;
+}
+
+/*fundo do menu*/
+.fundo {
+	background-color: #FCF6DB;
+	width: 100px;
+	border-radius: 20px;
+	margin-right: 10px;
+	margin-left: 1px;
+	margin-top: 50px;
+}
+
+/* cor do titulo*/
+.titarmario {
+	color: #462715;
+	margin-left: 30px;
+	font-size: 80px;
+}
+
+.linha {
+	height: 2px;
+	width: 81%;
+	border: 0;
+	background-color: black;
+	float: left;
+	margin-top: 0px;
+}
+
+#escrita {
+	margin-top: -28%;
+	margin-left: 10%;
+	width: 960px;
+}
+
+.imagemlogo {
+	padding-top: 2%;
+	padding-left: 90%;
+}
+
+.lista {
+	list-style: square;
+	color: #462715;
+	list-style-position: inside;
+	font-size: 50px;
+
+}
+
+/*rodapé*/
