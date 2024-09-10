@@ -1,4 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
 
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="format.css">
+	<link rel="stylesheet" href="responsivo.css">
+	<link rel="icon" href="imagens/logo.png" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+	<title> Armario inteligente </title>
+</head>
+
+<body>
 <h1>PROJETO ARMÁRIO INTELIGENTE</h1>
 
 
@@ -7,3 +20,7 @@
 
 
 ![image](https://github.com/user-attachments/assets/6ffc6106-9042-4888-b3e9-3a742842addc)
+
+
+</body>
+</html>
