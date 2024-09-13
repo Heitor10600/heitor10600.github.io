@@ -828,6 +828,25 @@ select:focus {
 
 }
 
+.det_produto{
+	display: flex;
+	width: 12rem;
+	height: 8rem;
+	margin: 12rem 0 0 1rem;
+}
+
+.det_produto img{
+	border: solid black;
+	margin: 1.5rem 1rem 1rem 0.6rem;
+	border-radius: 10%;
+}
+
+.det_produto p{
+	margin: 1.7rem 0 0 0 ;
+	font-size: 0.8rem;
+	font-weight: bolder;
+}
+
 
 
 
