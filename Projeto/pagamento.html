@@ -57,19 +57,32 @@
 		</div>
 		<div class="carrinho_prod">
 			<div class="ident_form">
-				<fieldset>
-					<form method="post" action="form.php">
-						<label for="nome">Nome Completo:</label>
-						<input type="text" id="nome" name="nome">
-		
-						<label for="email">Email:</label>
-						<input type="email" id="email" name="email">
-		
-						<label for="cpf">CPF:</label>
-						<input type="text" id="cpf" name="cpf" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+				<ul>
+					
+					<div class="tit_pagamento">Formas de pagamentos</div>	
+					<div class="form_pagamento">
+						<details>
+							<summary>Pix</summary>
 
-				</fieldset>
-				<a href="pagamento.html"><button class="button_prosseguir">Finalizar pedido</button></a>
+								<ul>
+									<li><img class="peca_style" src="peças/chap1.png"></li>
+									
+								</ul>
+
+						</details>
+						<details>
+							<summary>Cartão de crédito</summary>
+							
+								<ul>
+									<li><img class="peca_style" src="peças/chap1.png"></li>
+									
+								</ul>
+
+						</details>
+					</div>
+				<a href="identificaçao.html"><button class="button_voltar">Voltar</button></a>
+				<a href="carrinho.html" class="button_prosseguir"><br>Finalizar Pedido</a>
+
 			</div>
 		</div>
 		
