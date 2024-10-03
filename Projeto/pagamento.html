@@ -13,7 +13,6 @@
 
 <body>
 
-
 	<font size="7" class="tit_armario"> Armário Inteligente</font>
 
 	<hr class="linha">
@@ -64,19 +63,48 @@
 						<details>
 							<summary>Pix</summary>
 
-								<ul>
-									<li><img class="peca_style" src="peças/chap1.png"></li>
-									
-								</ul>
+							<div class="pix">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg/1200px-Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg.png" width="400" height="400">
+							</div>
 
 						</details>
 						<details>
 							<summary>Cartão de crédito</summary>
+
+							<div class="ident_form">
+								<fieldset>
+
+									<label for="cpf">Número de cartão:</label>
+									<input type="text" id="cart_num" name="cart_num" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+										<label for="nome">Nome aparente no cartão:</label>
+										<input type="text" id="cart_nome" name="cart_nome">
+						
+										<label for="email">Data de válidade:</label>
+										<input type="email" id="dat_valid" name="dat_valid">
+
+										<label for="email">CVV:</label>
+										<input type="email" id="cvv" name="cvv">
+						
+								</fieldset>
+							</div>
+
+						</details>
+						<details>
+							<summary>Boleto</summary>
 							
-								<ul>
-									<li><img class="peca_style" src="peças/chap1.png"></li>
-									
-								</ul>
+							<div class="ident_form">
+								<fieldset>
+										<label for="nome">Nome Completo:</label>
+										<input type="text" id="nome" name="nome">
+						
+										<label for="email">Email:</label>
+										<input type="email" id="email" name="email">
+						
+										<label for="cpf">CPF:</label>
+										<input type="text" id="cpf" name="cpf" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+								</fieldset>
+							</div>
 
 						</details>
 					</div>
@@ -85,24 +113,6 @@
 
 			</div>
 		</div>
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</div>
 
 	
@@ -114,41 +124,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script src="script.js"></script>
 
 	<footer>
 		<di<fov class="footer__alto">
@@ -244,6 +219,8 @@
 				</ul>
 			</div>
 	</footer>
+
+<script src="abrir_fechar.js"></script>
 </body>
 
 </html>

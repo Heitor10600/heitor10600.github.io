@@ -719,6 +719,8 @@ select:focus {
 
 /* CSS para estilizar as mensagens de sucesso e erro */
 #success-message {
+  width: 16rem;
+  margin: 2rem auto auto 36rem;
   color: green;
   font-size: 18px;
   font-weight: bold;
@@ -729,6 +731,8 @@ select:focus {
 }
 
 #error-message {
+  width: 10rem;
+  margin: 2rem auto auto 39rem;
   color: red;
   font-size: 18px;
   font-weight: bold;
@@ -955,6 +959,25 @@ select:focus {
 .form_pagamento summary::marker {
   content: "";
 }
+
+.pix img{
+  background-color: white;
+  border: solid 3px;
+  margin: auto auto auto 7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Footer Alto*/
 
