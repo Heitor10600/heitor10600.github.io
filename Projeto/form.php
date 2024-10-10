@@ -15,33 +15,37 @@
     <h1 class="tit_armario">Armário Inteligente</h1>
     <hr class="linha">
 
-    <nav class="menu">
+    <div class="registro">
+		<a href="form.php"><button><p>Cadastro</p></button></a>
+	</div>
+
+	<div class="registro">
+		<a href="login.php"><button><p>Login</p></button></a>
+	</div>
+
+	<nav class="menu">
         <article class="fundo_menu">
             <ul>
                 <li>
-                    <p>Home</p>
-                    <a href="index.html"><img src="imagens/casa.png" alt="Home" width="50" height="50"></a>
+                    <p>Home</p><a href="index.html" target="_self"><img src="imagens/casa.png" width="50"
+                            height="50"></a>
                 </li>
                 <li>
-                    <p>Armário</p>
-                    <a href="armario.html"><img src="imagens/armario.png" alt="Armário" width="50" height="50"></a>
+                    <p>Armário</p><a href="armario.html" target="_self"><img src="imagens/armario.png" width="50"
+                            height="50"></a>
                 </li>
                 <li>
-                    <p>Estilos</p>
-                    <a href="estilos.html"><img src="imagens/camisa.png" alt="Estilos" width="50" height="50"></a>
+                    <p>Estilos</p><a href="estilos.html" target="_self"><img src="imagens/camisa.png" width="50"
+                            height="50"></a>
                 </li>
                 <li>
-                    <p>Loja</p>
-                    <a href="lojas.html"><img src="imagens/bolsa.png" alt="Loja" width="50" height="50"></a>
-                </li>
-                <li>
-                    <p>Cadastro</p>
-                    <a href="form.php"><img src="imagens/person.png" alt="Cadastro" width="50" height="50"></a>
+                    <p>Loja</p><a href="lojas.html" target="_self"><img src="imagens/bolsa.png" width="50"
+                            height="50"></a>
                 </li>
             </ul>
         </article>
     </nav>
-
+	
     <div class="form">
         <fieldset>
             <legend>Cadastro do cliente</legend>
@@ -53,7 +57,7 @@
                 <input type="email" id="email" name="email">
 
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+				<input type="text" id="cpf" name="cpf" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
 
                 <div class="input">
                     <input type="submit" value="Enviar" name="submit">
@@ -65,31 +69,46 @@
 
 
     <?php
-if (isset($_POST['submit'])) {
-    include_once('conexao.php');
+	if (isset($_POST['submit'])) {
+		include_once('conexao.php');
 
-    // Sanitizar e validar entradas
-    $cpf = filter_var($_POST['cpf'], FILTER_SANITIZE_STRING);
-    $nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+		// Sanitizar e validar entradas
+		$cpf = filter_var($_POST['cpf'], FILTER_SANITIZE_NUMBER_INT);
+		$nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
+		$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
-    if ($cpf  &&$nome && $email) {
-        $stmt = $conexao->prepare("INSERT INTO clientes (cpf, nome, email) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $cpf, $nome, $email);
+		if ($cpf && $nome && $email) {
+			// Verificando se o CPF já existe no banco de dados
+			$sql_check = $conexao->prepare("SELECT cpf FROM clientes WHERE cpf = ?"); 
+			$sql_check->bind_param("s", $cpf);
+			$sql_check->execute();
+			$sql_check->store_result();
 
-        if ($stmt->execute()) {
-            echo "<p id='success-message'> Cadastro realizado com sucesso,</p>";
-        } else {
-            echo "<p id='error-message'> Erro ao realizar cadastro. Por favor, tente novamente.</p>";
-        }
+			if ($sql_check->num_rows > 0) {
+				echo "<p id='error-message'> CPF já cadastrado.</p>";
+				$sql_check->close();  // Fecha o statement antes de sair
+				return;  // Para a execução aqui
+			} 
 
-        $stmt->close();
-    } else {
-        echo "<p id='error-message'>Dados inválidos.</p>";
-    }
+			// Preparando a inserção de dados
+			$stmt = $conexao->prepare("INSERT INTO clientes (cpf, nome, email) VALUES (?, ?, ?)");
+			$stmt->bind_param("sss", $cpf, $nome, $email);
 
-    $conexao->close();
-}
+			// Executando o INSERT apenas se o CPF não estiver no banco
+			if ($stmt->execute()) {
+				echo "<p id='success-message'> Cadastro realizado com sucesso.</p>";
+			} else {
+				echo "<p id='error-message'> Erro ao realizar cadastro. Por favor, tente novamente.</p>";
+			}
+
+			$stmt->close();  // Fechando o statement
+		} else {
+			echo "<p id='error-message'>Dados inválidos.</p>";
+		}
+
+		
+		$conexao->close();  // Fechando a conexão
+	}
 ?>
 
 
@@ -187,7 +206,7 @@ if (isset($_POST['submit'])) {
 				</ul>
 			</div>
 	</footer>
-
+	<script src="messagem_temp.js"></script>
 </body>
 </html>
 

@@ -806,8 +806,13 @@ select:focus {
   width: 16rem;
 }
 
-.input button {
-  display: block;
+
+
+.input a {
+  text-decoration: none;
+  color: white;
+
+  display:flex;
   margin: 1rem auto auto auto;
   width: 20rem;
   height: 2.4rem;
@@ -815,17 +820,14 @@ select:focus {
   background-color: #b36c3f;
   border: solid transparent;
   border-radius: 0.5rem;
+  align-items: center;
+  
 }
 
-.input button:hover {
-  transition: 300ms;
-  cursor: default;
-  width: 16rem;
-}
+.input p{
+  display: block;
+  margin: auto;
 
-.input a {
-  text-decoration: none;
-  color: white;
 }
 
 /* CSS para estilizar as mensagens de sucesso e erro */
@@ -852,6 +854,8 @@ select:focus {
   border: 1px solid red;
   border-radius: 5px;
 }
+
+
 
 /* home carrinho */
 
