@@ -389,6 +389,10 @@ width: 7rem;
   width: 960px;
 }
 
+.peca a{
+  text-decoration: none;
+}
+
 /* deixas as peças um do lado da outra*/
 .peca ul {
   list-style: none;
@@ -400,37 +404,7 @@ width: 7rem;
   margin-bottom: 50px;
 }
 
-/****************************************************/
-#picture__input {
-  display: none;
-}
 
-.input_add_peca {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  margin-top: 4px;
-  margin-right: 10px;
-  border-color: black;
-  border: solid;
-  align-content: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 5%;
-  transition: 300ms;
-  cursor: pointer;
-}
-
-.input_add_peca:hover {
-  border-radius: 20%;
-  transition: 300ms;
-  height: 150px;
-  width: 150px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-
-/************************************************/
 
 
 
@@ -442,8 +416,8 @@ width: 7rem;
   margin-top: 4px;
   margin-right: 10px;
   border-color: black;
-  border: solid;
   align-content: center;
+  border: solid;
   width: 100px;
   height: 100px;
   border-radius: 5%;
@@ -460,16 +434,18 @@ width: 7rem;
 
 .input_add_peca{
   
-  background-color: transparent;
-  border: solid;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
   margin-top: 4px;
   margin-right: 10px;
-  border-color: black;
-  border: solid;
-  width: 106px;
-  height: 106px;
+  align-content: center;
+  width: 100px;
+  height: 100px;
   border-radius: 5%;
   transition: 300ms;
+  cursor: pointer;
+  border: solid black;
 }
 
 .input_add_peca:hover {
@@ -775,6 +751,17 @@ width: 7rem;
 }
 
 .form input {
+  display: block;
+  margin: 0.5rem auto auto auto;
+  width: 15rem;
+  height: 1.5rem;
+  background-color: #b36c3f;
+  border: solid transparent;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.form select {
   display: block;
   margin: 0.5rem auto auto auto;
   width: 15rem;

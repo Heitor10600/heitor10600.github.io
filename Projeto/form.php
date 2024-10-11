@@ -78,8 +78,8 @@
 		$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
 		if ($cpf && $nome && $email) {
-			// Verificando se o CPF já existe no banco de dados
-			$sql_check = $conexao->prepare("SELECT cpf FROM clientes WHERE cpf = ?"); 
+			// Verificando se o cpf já existe no banco de dados
+			$sql_check = $conexao->prepare("SELECT cpf FROM tbl_usuario WHERE cpf = ?"); 
 			$sql_check->bind_param("s", $cpf);
 			$sql_check->execute();
 			$sql_check->store_result();
@@ -91,7 +91,7 @@
 			} 
 
 			// Preparando a inserção de dados
-			$stmt = $conexao->prepare("INSERT INTO clientes (cpf, nome, email) VALUES (?, ?, ?)");
+			$stmt = $conexao->prepare("INSERT INTO tbl_usuario (cpf, nome, email) VALUES (?, ?, ?)");
 			$stmt->bind_param("sss", $cpf, $nome, $email);
 
 			// Executando o INSERT apenas se o CPF não estiver no banco
