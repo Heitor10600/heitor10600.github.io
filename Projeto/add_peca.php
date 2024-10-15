@@ -53,18 +53,16 @@
 	<?php
 	include_once('conexao.php');
 	if (isset($_POST['submit'])) 
-    
 ?>
 
 	<div class="form">
 		<fieldset>
 			<legend>Adicionar peça de roupa</legend>
-			<form method="post" action="add_peca.php">
+			<form method="post" action="add_peca.php" enctype="multipart/form-data">
 
 				<label for="categor">Tipo de roupa:</label>
-				<select size="1" name ="categor">
-
-				<?php
+				<select size="1" name="categor">
+					<?php
 	     // gera a lista de categorias
 	 	   $res=mysqli_query($conexao,"SELECT * FROM tbl_categoria");
 		    while($registro=mysqli_fetch_row($res))
@@ -76,6 +74,8 @@
 		 ?>
 				</select>
 
+				<label for="upload">Imagem da roupa:</label>
+				<input type="file" id="upload" name="upload" accept="image/*">
 
 				<div class="input">
 					<input type="submit" value="Enviar" name="submit">
@@ -84,6 +84,12 @@
 			</form>
 		</fieldset>
 	</div>
+</body>
+</html>
+
+
+
+
 
 
 	

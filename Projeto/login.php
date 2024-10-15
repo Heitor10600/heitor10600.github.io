@@ -54,8 +54,6 @@
 		<fieldset>
 			<legend>Login</legend>
 			<form method="post" action="login.php">
-				<label for="nome">Nome:</label>
-				<input type="text" id="nome" name="nome">
 
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email">
@@ -90,12 +88,11 @@
 
 		// Sanitizar e validar entradas
 		$senha = filter_var($_POST['senha']);
-		$nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
 		$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
 		// Verifica usuário e senha
-		$sql   =   mysqli_query($conexao, " SELECT A.nome, A.senha FROM tbl_usuario A WHERE 
-		A.nome  =  '$nome'AND A.senha   =  '$senha'") or die("ERRO NO COMANDO SQL");
+		$sql   =   mysqli_query($conexao, " SELECT A.email, A.senha FROM tbl_usuario A WHERE 
+		A.email  =  '$email'AND A.senha   =  '$senha'") or die("ERRO NO COMANDO SQL");
 
 		//Linhas afetadas pela consulta
 		$row   =  mysqli_num_rows($sql);
