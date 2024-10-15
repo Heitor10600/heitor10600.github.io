@@ -725,7 +725,7 @@ width: 7rem;
   background-color: #b36c3f;
 }
 
-/* formulario */
+/* cadastro */
 
 .form {
   list-style: none;
@@ -815,6 +815,24 @@ select:focus {
   display: block;
   margin: auto;
 
+}
+
+.olho{
+  border: solid transparent;
+text-align:right;
+margin-right: 18rem;
+margin-top: -2rem;
+margin-left: 30rem;
+
+  
+  /* position: absolute;
+   right: 30rem;
+   bottom: 3.98rem;
+  
+   height: auto;
+   width: auto;
+   vertical-align:middle;
+   cursor: pointer;*/
 }
 
 /* CSS para estilizar as mensagens de sucesso e erro */

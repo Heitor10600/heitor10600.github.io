@@ -60,8 +60,20 @@
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email">
 
-				<label for="cpf">CPF:</label>
-				<input type="text" id="cpf" name="cpf" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+				<label for="senha">Senha:</label>
+				
+				<input type="password" id="senha" name="senha">
+
+				<div class="olho">
+					<script src="showPassword.js"></script>
+					<script src="https://cdn.lordicon.com/lordicon.js"></script>
+					<lord-icon
+					src="https://cdn.lordicon.com/dicvhxpz.json"
+					trigger="hover"
+					colors="primary:#e0f7e9,secondary:#e0f7e9"
+					style="width:25px;height:25px">
+					</lord-icon>
+				</div>
 
 				<div class="input">
 					<input type="submit" value="Enviar" name="submit">
@@ -77,13 +89,13 @@
 		include_once('conexao.php');
 
 		// Sanitizar e validar entradas
-		$cpf = filter_var($_POST['cpf'], FILTER_SANITIZE_NUMBER_INT);
+		$senha = filter_var($_POST['senha']);
 		$nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
 		$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
 		// Verifica usuário e senha
-		$sql   =   mysqli_query($conexao, " SELECT A.nome, A.cpf FROM tbl_usuario A WHERE 
-		A.nome  =  '$nome'AND A.cpf   =  '$cpf'") or die("ERRO NO COMANDO SQL");
+		$sql   =   mysqli_query($conexao, " SELECT A.nome, A.senha FROM tbl_usuario A WHERE 
+		A.nome  =  '$nome'AND A.senha   =  '$senha'") or die("ERRO NO COMANDO SQL");
 
 		//Linhas afetadas pela consulta
 		$row   =  mysqli_num_rows($sql);
