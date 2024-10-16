@@ -456,6 +456,82 @@ width: 7rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/* home add peça*//**************************************************************************************************/
+
+.form_add_peca {
+  list-style: none;
+  display: block;
+  margin: -30rem auto auto 20rem;
+  max-width: 50rem;
+}
+
+.form_add_peca legend {
+  font-weight: bold;
+  color: #462715;
+  font-size: 4rem;
+  display: block;
+  margin: auto auto auto auto;
+}
+
+.form_add_peca p {
+  font-weight: bold;
+  color: #462715;
+  font-size: 2rem;
+  display: block;
+  margin: 1rem auto auto 17rem;
+}
+
+.form_add_peca input {
+  display: block;
+  margin: 0.5rem auto auto auto;
+  width: 15rem;
+  height: 1.5rem;
+  background-color: #b36c3f;
+  border: solid transparent;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.form_add_peca select {
+  display: block;
+  margin: 0.5rem auto auto auto;
+  width: 15rem;
+  height: 1.5rem;
+  background-color: #b36c3f;
+  border: solid transparent;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.form_add_peca input:focus,
+input:focus,
+select:focus {
+  outline: 0;
+}
+.add_peca_input{
+  display: block;
+  margin: 1rem auto auto auto;
+  width: 10rem;
+  height: 3rem;
+  background-color: #b36c3f;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+
+.add_peca_input h1{
+  display: block;
+  padding:1rem;
+  color: white;
+}
+
+
+
+#upload{
+  display: none;
+
+}
+
 /* home estilos */
 
 /* div estilo*/
@@ -726,15 +802,15 @@ width: 7rem;
 }
 
 /* cadastro /login */
-
-.form {
+/*******************************************************************************************************************/
+.form_cadastro-login {
   list-style: none;
   display: block;
   margin: -30rem auto auto 20rem;
   max-width: 50rem;
 }
 
-.form legend {
+.form_cadastro-login legend {
   font-weight: bold;
   color: #462715;
   font-size: 4rem;
@@ -742,7 +818,7 @@ width: 7rem;
   margin: auto auto auto auto;
 }
 
-.form label {
+.form_cadastro-login p {
   font-weight: bold;
   color: #462715;
   font-size: 2rem;
@@ -750,7 +826,7 @@ width: 7rem;
   margin: 1rem auto auto 17rem;
 }
 
-.form input {
+.form_cadastro-login input {
   display: block;
   margin: 0.5rem auto auto auto;
   width: 15rem;
@@ -761,7 +837,7 @@ width: 7rem;
   color: white;
 }
 
-.form select {
+.form_cadastro-login select {
   display: block;
   margin: 0.5rem auto auto auto;
   width: 15rem;
@@ -772,11 +848,12 @@ width: 7rem;
   color: white;
 }
 
-.form input:focus,
+.form_cadastro-login input:focus,
 input:focus,
 select:focus {
   outline: 0;
 }
+
 
 .input input {
   width: 20rem;

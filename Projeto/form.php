@@ -51,7 +51,7 @@
 		</article>
 	</nav>
 
-	<div class="form">
+	<div class="form_cadastro-login">
 		<fieldset>
 			<legend>Cadastro do cliente</legend>
 			<form method="post" action="form.php">

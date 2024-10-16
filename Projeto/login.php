@@ -50,15 +50,15 @@
 		</article>
 	</nav>
 
-	<div class="form">
+	<div class="form_cadastro-login">
 		<fieldset>
 			<legend>Login</legend>
 			<form method="post" action="login.php">
 
-				<label for="email">Email:</label>
+				<p for="email">Email:</p>
 				<input type="email" id="email" name="email">
 
-				<label for="senha">Senha:</label>
+				<p for="senha">Senha:</p>
 				
 				<input type="password" id="senha" name="senha">
 
