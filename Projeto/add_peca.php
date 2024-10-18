@@ -126,6 +126,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "<p id='error-message'>Nenhum arquivo foi enviado ou ocorreu um erro.</p>";
     }
+	header("Location: armario.html");
 }
 ?>
 
@@ -232,6 +233,8 @@ if (isset($_POST['submit'])) {
 		</div>
 </footer>
 <script src="messagem_temp.js"></script>
+<script src="inserir_img_armario.js"></script>
+
 </body>
 
 </html>
