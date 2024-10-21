@@ -35,7 +35,7 @@
 							height="50"></a>
 				</li>
 				<li>
-					<p>Armário</p><a href="armario.html" target="_self"><img src="imagens/armario.png" width="50"
+					<p>Armário</p><a href="armario.php" target="_self"><img src="imagens/armario.png" width="50"
 							height="50"></a>
 				</li>
 				<li>
@@ -126,7 +126,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "<p id='error-message'>Nenhum arquivo foi enviado ou ocorreu um erro.</p>";
     }
-	header("Location: armario.html");
+	header("Location: armario.php");
 }
 ?>
 

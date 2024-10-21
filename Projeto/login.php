@@ -28,27 +28,27 @@
 	</div>
 
 	<nav class="menu">
-		<article class="fundo_menu">
-			<ul>
-				<li>
-					<p>Home</p><a href="index.html" target="_self"><img src="imagens/casa.png" width="50"
-							height="50"></a>
-				</li>
-				<li>
-					<p>Armário</p><a href="armario.html" target="_self"><img src="imagens/armario.png" width="50"
-							height="50"></a>
-				</li>
-				<li>
-					<p>Estilos</p><a href="estilos.html" target="_self"><img src="imagens/camisa.png" width="50"
-							height="50"></a>
-				</li>
-				<li>
-					<p>Loja</p><a href="lojas.html" target="_self"><img src="imagens/bolsa.png" width="50"
-							height="50"></a>
-				</li>
-			</ul>
-		</article>
-	</nav>
+        <article class="fundo_menu">
+            <ul>
+                <li>
+                    <p>Home</p><a href="index.html" target="_self"><img src="imagens/casa.png" width="50"
+                            height="50"></a>
+                </li>
+                <li>
+                    <p>Armário</p><a href="armario.php" target="_self"><img src="imagens/armario.png" width="50"
+                            height="50"></a>
+                </li>
+                <li>
+                    <p>Estilos</p><a href="estilos.html" target="_self"><img src="imagens/camisa.png" width="50"
+                            height="50"></a>
+                </li>
+                <li>
+                    <p>Loja</p><a href="lojas.html" target="_self"><img src="imagens/bolsa.png" width="50"
+                            height="50"></a>
+                </li>
+            </ul>
+        </article>
+    </nav>
 
 	<div class="form_cadastro-login">
 		<fieldset>
@@ -106,7 +106,7 @@
 				session_start();
 				$_SESSION["id"]    =  $dados['usu_id'];
 				$_SESSION["nome"]  =  $dados['usu_nome'];
-				header("Location: armario.html");
+				header("Location: armario.php");
 			}
 		}
 	}
