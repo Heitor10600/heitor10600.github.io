@@ -677,7 +677,9 @@ select:focus {
   border-radius: 1rem;
   text-align: center;
   color: white;
+  transition: 0.3s;
 }
+
 
 #carrinho details {
   height: auto;
