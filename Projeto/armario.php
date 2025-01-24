@@ -19,15 +19,11 @@
 	<hr class="linha">
 
 	<div class="registro">
-		<a href="form.php"><button>
-				<p>Cadastro</p>
-			</button></a>
+		<a href="form.php"><button><p>Cadastro</p></button></a>
 	</div>
 
 	<div class="registro">
-		<a href="login.php"><button>
-				<p>Login</p>
-			</button></a>
+		<a href="login.php"><button><p>Login</p></button></a>
 	</div>
 
 	<nav class="menu">
@@ -38,7 +34,7 @@
                             height="50"></a>
                 </li>
                 <li>
-                    <p>Armário</p><a href="armario.html" target="_self"><img src="imagens/armario.png" width="50"
+                    <p>Armário</p><a href="armario.php" target="_self"><img src="imagens/armario.png" width="50"
                             height="50"></a>
                 </li>
                 <li>
@@ -68,7 +64,7 @@
 
 					<div class="peca" id="peca_chapeus">
 						<ul>
-							<a class="input_add_peca" href="add_peca.html"> <img src="https://cdn-icons-png.flaticon.com/512/6048/6048657.png"></a>
+							<a class="input_add_peca" href="add_peca.php"> <img src="https://cdn-icons-png.flaticon.com/512/6048/6048657.png"></a>
 							<li><img class="peca_style" src="peças/chap1.png"></li>
 							<li><img class="peca_style" src="peças/chap2.png"></li>
 							<li><img class="peca_style" src="peças/chap3.jpg"></li>
